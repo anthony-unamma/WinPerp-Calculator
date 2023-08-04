@@ -214,27 +214,28 @@ inputFields[4].addEventListener('input', function() {
 
     
 
+function calculateEntryExit() {
+    let resultsForEntryExit = resultsEntryExit(riskVal, entryVal, exitVal, leverageVal);    
+    resultPosSize.innerText = resultsForEntryExit[0]
+    resultMargin.innerText = resultsForEntryExit[1]
+
+}
+
+function calculatePercent() {
+    let resultsForPercent = resultsPercent(riskVal, stopLossVal, leverageVal);
+    resultPosSize.innerText = resultsForPercent[0];
+    resultMargin.innerText = resultsForPercent[1];
+}
+
 
 calculateButton.addEventListener('mousedown', function(event) {
 
     if(switchSlButton.innerText == text1) {
-
-        console.log('text1')
-        resultsEntryExit(riskVal, entryVal, exitVal, leverageVal);
-        
-
-        resultPosSize.innerText = (resultsEntryExit(riskVal, entryVal, exitVal, leverageVal)[0])
-        resultMargin.innerText = (resultsEntryExit(riskVal, entryVal, exitVal, leverageVal)[1])
+        calculateEntryExit();
     }
 
     else if(switchSlButton.innerText == text2) {
-
-        console.log('text2');
-        resultsPercent(riskVal, stopLossVal, leverageVal);
-        console.log(resultsPercent(riskVal, stopLossVal, leverageVal));
-
-        resultPosSize.innerText = resultsPercent(riskVal, stopLossVal, leverageVal)[0];
-        resultMargin.innerText = resultsPercent(riskVal, stopLossVal, leverageVal)[1];
+       calculatePercent(); 
     }
 
 })
