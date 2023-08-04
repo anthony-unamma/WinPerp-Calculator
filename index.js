@@ -215,9 +215,18 @@ inputFields[4].addEventListener('input', function() {
     
 
 function calculateEntryExit() {
-    let resultsForEntryExit = resultsEntryExit(riskVal, entryVal, exitVal, leverageVal);    
-    resultPosSize.innerText = resultsForEntryExit[0]
-    resultMargin.innerText = resultsForEntryExit[1]
+    let resultsForEntryExit = resultsEntryExit(riskVal, entryVal, exitVal, leverageVal);
+
+    console.log(resultsForEntryExit)
+    if(isNaN(resultsForEntryExit[0])) {
+        resultPosSize.innerText = '--.-'
+        resultMargin.innerText = '--.-'
+    }  
+    else {
+        resultPosSize.innerText = resultsForEntryExit[0]
+        resultMargin.innerText = resultsForEntryExit[1]
+    }
+    
 
 }
 
@@ -227,7 +236,7 @@ function calculatePercent() {
     resultMargin.innerText = resultsForPercent[1];
 }
 
-
+//When the user clicks the 'calculate' button
 calculateButton.addEventListener('mousedown', function() {
     if(switchSlButton.innerText == text1) {
         calculateEntryExit();
