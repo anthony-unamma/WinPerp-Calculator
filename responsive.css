@@ -1,0 +1,106 @@
+@media (max-width: 992px) {
+    /* Header section */
+    .navlinks {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+
+    /* Calculator section */
+    .section-header {
+        width: 80%;
+    }
+}
+
+
+/* MEDIUM */
+@media (max-width:768px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    /* Calculator section */
+    .calc-container {
+        width: 90%;
+    }
+
+    .button.buy, .button.sell {
+        width: 10rem;
+    }
+
+    .tooltip.risk {
+        transform: translate(-100px, 10px);
+    }
+
+}
+
+
+
+/* MOBILE VIEW */
+@media (max-width: 576px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    /* Header section */
+    #header-logo {
+        width: 150px;
+    }
+
+    /* Calculator section */
+    .section-header {
+        width: 100%;
+    }
+
+    .container.calc {
+        gap: 2rem;
+    }
+
+    .calc-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .tooltip.risk {
+        transform: translate(-200px, 10px);
+    }
+
+    .tooltip {
+        width: 250px;
+    }
+
+    .tooltip.percent-stoploss {
+        transform: translate(-180px, 10px);
+    }
+
+    .entry-exit {
+        flex-direction: column;
+    }
+
+    .buy-sell-tab {
+        width: 100%;
+    }
+
+    .button.buy, .button.sell {
+        width: 100%;
+    }
+
+    .tooltip.lvg-input {
+        transform: translate(-110px, -170px);
+    }
+
+    .button.rst {
+        width: 80%;
+    }
+
+    .position-size {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}

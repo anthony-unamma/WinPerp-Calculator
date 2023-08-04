@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinPerp</title>
+    
+    <!-- Google font: Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+    <!-- External CSS link-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container head">
+            <a href="index.html">
+                <img id="header-logo" src="icons/WinPerp-Logo.svg">
+            </a>
+            <ul class="navlinks">
+                <li><a href="index.html">Calculator</a></li>
+                <li><a href="index.html">Support Us</a></li>
+            </ul>
+
+            <div class="ham-menu">
+                <span class="material-symbols-rounded mid-icon">
+                    menu
+                    </span>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- CALCULATOR SECTION -->
+        <section id="calculator">
+            <div class="container calc">
+                <div class="section-header">
+                    <h2>Crypto Futures Position Size Tool</h2>
+                    <p>Calculate your position size on USDT futures
+                        based on your
+                        risk amount with ease.
+                    </p>
+                </div>
+        
+                <!-- The calculator -->
+                <div class="calc-container">
+                    <div class="buy-sell-tab">
+                        <fieldset class="buy-sell">
+                            <label for="buy" class="button buy">Buy
+                                <input type="radio" id="buy" name="bs" checked>
+                            </label>
+                            <label for="sell" class="button sell">Sell
+                                <input type="radio" id="sell" name="bs">
+                            </label>
+                        </fieldset>
+                    </div>
+        
+                    <!-- START DEBUGGING RESPONSIVENESSS HERE -->
+                    <div class="calc-input">
+                        <form class="calc-fields">
+                            <div class="inputs risk-field">
+                                <label for="risk" class="input-label">
+                                    How much do you want to risk? ($)
+                                    <div class="info-tooltip">
+                                        <div class="info-icon">
+                                            <span class="material-symbols-rounded mid-icon">info</span>
+                                        </div>
+                                        <div class="tooltip risk">
+                                            <p class="tooltip-text">This is the amount you are willing to risk if the
+                                                trade hits your stop loss.
+                                            </p>
+                                        </div>
+                                    </div>
+        
+                                </label>
+                                <input type="number" id="risk" name="risk" class="input-field" placeholder="USDT" step="0.01"
+                                    min="0" required>
+                            </div>
+        
+                            <!-- Stop loss type -->
+                            <div class="stop-loss-type">
+                                <!-- SL in % input -->
+                                <div class="inputs sl-percent remove">
+                                    <label for="stop-loss" class="input-label">
+                                        Stop loss (% value)
+                                        <div class="info-tooltip">
+                                            <div class="info-icon">
+                                                <span class="material-symbols-rounded mid-icon">info</span>
+                                            </div>
+                                            <div class="tooltip percent-stoploss">
+                                                <img class="tooltip-img" src="images/RR-image-with-percentage-value.png"
+                                                    alt="reward to risk tool on tradingview showing the percentage
+                                                                                                            value of price change of stop loss">
+                                                <p class="tooltip-text">Entering the entry and exit price can be cumbersome,
+                                                    however, you can simply use the Reward:Risk tool on TradingView and use
+                                                    the % change in the RED risk price range.
+                                                </p>
+                                            </div>
+                                        </div>
+        
+        
+                                    </label>
+                                    <input type="number" id="stop-loss" name="stop-loss" class="input-field"
+                                        placeholder="eg. 0.5" step="0.01" min="0">
+                                </div>
+        
+                                <!-- Entry & Exit inputs -->
+                                <div class="entry-exit">
+                                    <div class="inputs sl-entry">
+                                        <label for="stop-loss-entry" class="input-label">Entry price</label>
+                                        <input type="number" id="stop-loss-entry" name="stop-loss-entry" class="input-field"
+                                            placeholder="USDT" min="0" step="0.01">
+                                    </div>
+                                    <div class="inputs sl-exit">
+                                        <label for="stop-loss-exit" class="input-label">Exit price</label>
+                                        <input type="number" id="stop-loss-exit" name="stop-loss-exit" class="input-field"
+                                            placeholder="USDT" min="0" step="0.01">
+                                    </div>
+                                </div>
+                                <div class="switch-sl-type">
+                                    <a class="switch-sl-button text1">Switch to % value</a>
+                                </div>
+                            </div>
+        
+                            <!-- Leverage input -->
+                            <div class="inputs leverage-input">
+                                <label for="leverage" class="input-label">
+                                    Leverage
+                                    <div class="info-tooltip">
+                                        <div class="info-icon">
+                                            <span class="material-symbols-rounded mid-icon">info</span>
+                                        </div>
+                                        <div class="tooltip lvg-input">
+                                            <p class="tooltip-text">Leverage determines how much margin is needed to maintain
+                                                your position and does not affect your position size
+                                            </p>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="number" id="leverage" name="leverage" class="input-field" placeholder="eg. 50"
+                                    step="0.01" min="0" max="125">
+                            </div>
+        
+        
+        
+        
+        
+                        </form>
+        
+        
+                    </div>
+                    <!-- Results -->
+                    <button class="calculate">Calculate</button>
+        
+                    <div class="results">
+                        <div class="position-size">
+                            <h5>Position size (Amount)</h5>
+                            <div class="copy-amount">
+                                <span class="material-symbols-rounded mid-icon">content_copy</span>
+                                <div class="amount">
+                                    <h3>0.00</h3>
+                                    <h4>USDT</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin">
+                            <h6>Margin</h6>
+                            <div class="amount">
+                                <h6>0.00</h6>
+                                <h6>USDT</h6>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Reset button -->
+                    <input type="reset" value="Reset" class="button rst">
+        
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+
+
+    <script src="index.js"></script>
+</body>
+</html>
