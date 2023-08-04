@@ -218,7 +218,7 @@ function calculateEntryExit() {
     let resultsForEntryExit = resultsEntryExit(riskVal, entryVal, exitVal, leverageVal);
 
     console.log(resultsForEntryExit)
-    if(isNaN(resultsForEntryExit[0])) {
+    if(isNaN(resultsForEntryExit[0]) || resultsForEntryExit == Infinity) {
         resultPosSize.innerText = '--.-'
         resultMargin.innerText = '--.-'
     }  
@@ -232,8 +232,16 @@ function calculateEntryExit() {
 
 function calculatePercent() {
     let resultsForPercent = resultsPercent(riskVal, stopLossVal, leverageVal);
-    resultPosSize.innerText = resultsForPercent[0];
-    resultMargin.innerText = resultsForPercent[1];
+
+    if(isNaN(resultsForPercent[0]) || resultsForPercent == Infinity) {
+        resultPosSize.innerText = '--.-'
+        resultMargin.innerText = '--.-'
+    }
+    else {
+        resultPosSize.innerText = resultsForPercent[0];
+        resultMargin.innerText = resultsForPercent[1];
+    }
+    
 }
 
 //When the user clicks the 'calculate' button
