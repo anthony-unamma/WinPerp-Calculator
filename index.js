@@ -218,7 +218,7 @@ function calculateEntryExit() {
     let resultsForEntryExit = resultsEntryExit(riskVal, entryVal, exitVal, leverageVal);
 
     console.log(resultsForEntryExit)
-    if(isNaN(resultsForEntryExit[0]) || resultsForEntryExit == Infinity) {
+    if(isNaN(resultsForEntryExit[0]) || resultsForEntryExit[0] == Infinity) {
         resultPosSize.innerText = '--.-'
         resultMargin.innerText = '--.-'
     }  
@@ -233,7 +233,7 @@ function calculateEntryExit() {
 function calculatePercent() {
     let resultsForPercent = resultsPercent(riskVal, stopLossVal, leverageVal);
 
-    if(isNaN(resultsForPercent[0]) || resultsForPercent == Infinity) {
+    if(isNaN(resultsForPercent[0]) || resultsForPercent[0] == Infinity) {
         resultPosSize.innerText = '--.-'
         resultMargin.innerText = '--.-'
     }
