@@ -228,8 +228,7 @@ function calculatePercent() {
 }
 
 
-calculateButton.addEventListener('mousedown', function(event) {
-
+calculateButton.addEventListener('mousedown', function() {
     if(switchSlButton.innerText == text1) {
         calculateEntryExit();
     }
@@ -237,6 +236,21 @@ calculateButton.addEventListener('mousedown', function(event) {
     else if(switchSlButton.innerText == text2) {
        calculatePercent(); 
     }
+
+})
+
+/* When the user presses the enter key */
+calculateButton.addEventListener('keydown', function (event) {
+    if (event.key == 'Enter') {
+        if (switchSlButton.innerText == text1) {
+            calculateEntryExit();
+        }
+
+        else if (switchSlButton.innerText == text2) {
+            calculatePercent();
+        }
+    }
+
 
 })
 
