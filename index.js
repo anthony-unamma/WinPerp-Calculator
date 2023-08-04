@@ -250,7 +250,7 @@ calculateButton.addEventListener('mousedown', function() {
 
 /* When the user presses the enter key */
 calculateButton.addEventListener('keydown', function (event) {
-    if (event.key == 'Enter') {
+    if (event.key == 'Enter' || event.key == ' ') {
         if (switchSlButton.innerText == text1) {
             calculateEntryExit();
         }
