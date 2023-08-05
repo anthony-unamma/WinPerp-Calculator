@@ -286,5 +286,14 @@ let resetButton = document.querySelector('.button.rst');
 function resetForm() {
     formInput.reset();
 }
-
 resetButton.addEventListener('mousedown', resetForm);
+
+
+
+//Click the copy icon to copy the position size amount
+const copyPosSizeIcon = document.querySelector('.copy-div');
+const posSize = document.querySelector('div.amount h3');
+
+copyPosSizeIcon.addEventListener('mousedown', function() {
+    navigator.clipboard.writeText(posSize.textContent);
+})

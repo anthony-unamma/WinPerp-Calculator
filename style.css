@@ -17,6 +17,7 @@
     --light-text: rgba(0, 0, 0, 0.60);
     --light-text-40: rgba(0, 0, 0, 0.40);
     --border: rgba(0, 0, 0, 0.24);
+    --hover-bkgrnd: hsl(0, 0%, 90%);
 
     --border-line: 1px solid rgba(0, 0, 0, 0.24);
 }
@@ -99,6 +100,7 @@ h6 {
 .mid-icon {
     font-size: 1.5rem;
     cursor: pointer;
+    user-select: none;
 }
 
 
@@ -425,5 +427,21 @@ input:focus-visible {
     transition: all 0.1s ease-in;
 }
 .calc-sell:active {
+    transform: scale(0.9);
+}
+
+.copy-div {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    
+}
+.copy-div:hover {
+    background-color: var(--hover-bkgrnd);
+    transition: all 0.1s ease-in;
+}
+
+.copy-div:active {
     transform: scale(0.9);
 }
