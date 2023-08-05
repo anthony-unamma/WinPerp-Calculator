@@ -18,6 +18,7 @@
     --light-text-40: rgba(0, 0, 0, 0.40);
     --border: rgba(0, 0, 0, 0.24);
     --hover-bkgrnd: hsl(0, 0%, 90%);
+    --dirty-green: hsl(72, 48%, 51%);
 
     --border-line: 1px solid rgba(0, 0, 0, 0.24);
 }
@@ -103,11 +104,19 @@ h6 {
     user-select: none;
 }
 
+.dirty-green {
+    color: var(--dirty-green);
+}
+
 
 
 /* CALCULATOR SECTION */
 #calculator {
     padding-top: 6rem;
+    background-image: url('icons/Ellipse\ 1.svg'), url('icons/Ellipse\ 1.svg');
+    background-repeat: no-repeat;
+    background-position: -257px 662px, 1200px center;
+    margin-bottom: 6rem;
 }
 
 .calc-container {

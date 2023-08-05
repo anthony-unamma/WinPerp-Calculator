@@ -9,6 +9,10 @@
     }
 
     /* Calculator section */
+    #calculator {
+        background-image: none;
+    }
+
     .section-header {
         width: 80%;
     }
@@ -61,6 +65,10 @@
     }
 
     /* Calculator section */
+    #calculator {
+        background-image: none;
+    }
+
     .section-header {
         width: 100%;
     }
@@ -114,5 +122,15 @@
 
     .success-msg {
         width: 94%;
+    }
+}
+
+
+
+
+/* For responsiveness of stroke circles */
+@media (max-width: 1330px) {
+    #calculator {
+        background-position: -404px 662px, 1000px center;
     }
 }
