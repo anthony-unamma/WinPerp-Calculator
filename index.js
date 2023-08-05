@@ -301,5 +301,5 @@ copyPosSizeIcon.addEventListener('mousedown', function() {
 
     setTimeout(function() {
         copySuccessMessage.classList.add('remove');
-    }, 2000);
+    }, 4000);
 })
