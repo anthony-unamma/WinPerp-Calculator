@@ -290,10 +290,16 @@ resetButton.addEventListener('mousedown', resetForm);
 
 
 
-//Click the copy icon to copy the position size amount
+//Click the copy icon to copy the position size amount and display a copy successful message
 const copyPosSizeIcon = document.querySelector('.copy-div');
 const posSize = document.querySelector('div.amount h3');
+const copySuccessMessage = document.querySelector('.success-msg');
 
 copyPosSizeIcon.addEventListener('mousedown', function() {
     navigator.clipboard.writeText(posSize.textContent);
+    copySuccessMessage.classList.remove('remove');
+
+    setTimeout(function() {
+        copySuccessMessage.classList.add('remove');
+    }, 2000);
 })
