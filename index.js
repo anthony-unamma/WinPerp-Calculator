@@ -283,10 +283,22 @@ let resultMargin = document.querySelector('.amount h6');
 let formInput = document.querySelector('.calc-fields');
 let resetButton = document.querySelector('.button.rst');
 
+// A function to reset the values of Position size and margin
+function resetPosSizeAndMargin() {
+    resultPosSize.innerText = '0.00';
+    resultMargin.innerText = '0.00';
+}
+
 function resetForm() {
     formInput.reset();
+    resetPosSizeAndMargin();
 }
 resetButton.addEventListener('mousedown', resetForm);
+resetButton.addEventListener('keydown', function(event) {
+    if(event.key == 'Enter' || event.key == ' ') {
+        resetForm();
+    }
+})
 
 
 
