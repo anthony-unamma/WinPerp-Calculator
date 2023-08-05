@@ -12,6 +12,10 @@
     .section-header {
         width: 80%;
     }
+
+    .success-msg {
+        width: 80%;
+    }
 }
 
 
@@ -31,6 +35,10 @@
 
     .tooltip.risk {
         transform: translate(-100px, 10px);
+    }
+
+    .success-msg {
+        width: 80%;
     }
 
 }
@@ -102,5 +110,9 @@
         flex-direction: column;
         gap: 0.5rem;
         align-items: flex-start;
+    }
+
+    .success-msg {
+        width: 94%;
     }
 }

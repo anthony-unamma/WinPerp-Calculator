@@ -9,7 +9,7 @@
     --cta: #FCD535;
     --text: #000000;
     --green: #28D294;
-    --green-dark: hsl(158, 68%, 40%);
+    --green-dark-40p: hsl(158, 68%, 35%);
     --red: #DF3451;
     --red-dark: hsl(350, 73%, 45%);
     --white: #FFFFFF;
@@ -403,7 +403,7 @@ input:focus-visible {
     align-self: stretch;
 }
 .calc-buy:hover {
-    background-color: var(--green-dark);
+    background-color: var(--green-dark-40p);
     transition: all 0.1s ease-in;
 }
 .calc-buy:active {
@@ -444,4 +444,21 @@ input:focus-visible {
 
 .copy-div:active {
     transform: scale(0.9);
+}
+
+.success-msg {
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--green-dark-40p);
+    color: white;
+    padding: 1rem;
+    width: 40%;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    position: fixed;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
