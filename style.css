@@ -14,6 +14,8 @@
     --red-dark: hsl(350, 73%, 45%);
     --white: #FFFFFF;
     --white-60: rgba(255, 255, 255, 0.6);
+    --white-40: rgba(255, 255, 255, 0.4);
+    --white-24: rgba(255, 255, 255, 0.24);
     --light-text: rgba(0, 0, 0, 0.60);
     --light-text-40: rgba(0, 0, 0, 0.40);
     --border: rgba(0, 0, 0, 0.24);
@@ -27,6 +29,7 @@ body {
     font-family: 'Sora', sans-serif;
     font-size: 16px;
     background-color: var(--white);
+    color: var(--text);
 }
 
 h2 {
@@ -116,7 +119,7 @@ h6 {
     background-image: url('icons/Ellipse\ 1.svg'), url('icons/Ellipse\ 1.svg');
     background-repeat: no-repeat;
     background-position: -257px 662px, 1200px center;
-    margin-bottom: 6rem;
+    padding-bottom: 10rem;
 }
 
 .calc-container {
@@ -168,6 +171,11 @@ h6 {
     font-weight: 700;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
 
 .button.buy, .button.sell {
@@ -474,4 +482,48 @@ input:focus-visible {
     top: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+
+
+/* FOOTER SECTION */
+#footer {
+    background-color: var(--text);
+    color: var(--white);
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.container.footer-content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--white-24);
+    width: 100%;
+}
+
+.line-copyright-socialicons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.copyright-socialicons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

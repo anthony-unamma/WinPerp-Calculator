@@ -134,3 +134,12 @@
         background-position: -404px 662px, 1000px center;
     }
 }
+
+
+@media (max-width: 350px) {
+    .copyright-socialicons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
